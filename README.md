@@ -35,6 +35,14 @@ CNAME www  rayrosound-sudo.github.io
 
 Delete Porkbun's default `ALIAS @` and `CNAME *` records first.
 
+## SEO
+
+- Title/description/keywords in `index.html` head; structured data (`@graph`: WebSite, Person+MusicGroup, Service) in the same file.
+- `sitemap.xml` (bump `<lastmod>` on content changes), `robots.txt`.
+- IndexNow key = `.indexnow-key` + `<key>.txt` at root; re-ping after big updates:
+  `curl -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' -d '{"host":"rayrosound.com","key":"<key>","urlList":["https://rayrosound.com/"]}'`
+- Google Search Console: add property `rayrosound.com` (DNS TXT verification via Porkbun API), submit sitemap. Needs Ray's Google login.
+
 ## Editing checklist
 
 - WhatsApp number: `data-whatsapp` link in the contact section (currently a placeholder)
