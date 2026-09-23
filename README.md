@@ -45,6 +45,6 @@ Delete Porkbun's default `ALIAS @` and `CNAME *` records first.
 
 ## Editing checklist
 
-- WhatsApp number: `data-whatsapp` link in the contact section (currently a placeholder)
+- WhatsApp: +971 58 582 0397 (`data-whatsapp` link in the contact section)
 - Replace `assets/RayRo-EPK.pdf` when the EPK is updated
 - Hero / F1 video: drop files into `assets/video/`, nothing else to change
