@@ -2,6 +2,8 @@
    Intro → Lenis smooth scroll → GSAP text-mask reveals → parallax → cursor → players. */
 (function () {
   var html = document.documentElement;
+  // If GSAP failed to load (blocked CDN, ad-blocker), fall back to a fully static page
+  if (!window.gsap || !window.ScrollTrigger) { html.classList.remove('is-loading'); html.classList.add('no-motion'); }
   var noMotion = html.classList.contains('no-motion') || html.classList.contains('shot');
   var touch = html.classList.contains('touch');
   var EASE = 'expo.out';
@@ -109,6 +111,24 @@
       el.addEventListener('mouseleave', function () { cur.classList.remove('is-label'); });
     });
   }
+
+  /* ── stage strip: drag to scroll on desktop, wheel → horizontal ── */
+  document.querySelectorAll('[data-strip]').forEach(function (strip) {
+    if (touch) return;
+    var down = false, startX = 0, startLeft = 0, moved = false;
+    strip.addEventListener('pointerdown', function (e) { down = true; moved = false; startX = e.clientX; startLeft = strip.scrollLeft; strip.setPointerCapture(e.pointerId); strip.classList.add('is-dragging'); });
+    strip.addEventListener('pointermove', function (e) { if (!down) return; var dx = e.clientX - startX; if (Math.abs(dx) > 3) moved = true; strip.scrollLeft = startLeft - dx; });
+    function up() { down = false; strip.classList.remove('is-dragging'); }
+    strip.addEventListener('pointerup', up); strip.addEventListener('pointercancel', up);
+    strip.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+    strip.addEventListener('wheel', function (e) {
+      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+      var atStart = strip.scrollLeft <= 0 && e.deltaY < 0;
+      var atEnd = Math.ceil(strip.scrollLeft + strip.clientWidth) >= strip.scrollWidth && e.deltaY > 0;
+      if (atStart || atEnd) return;
+      e.preventDefault(); strip.scrollLeft += e.deltaY;
+    }, { passive: false });
+  });
 
   /* ── YouTube lightbox ── */
   var lb = document.querySelector('.lightbox'), frame = lb && lb.querySelector('.lightbox__frame');
