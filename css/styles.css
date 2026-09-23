@@ -250,6 +250,7 @@ html.no-motion .veil, html.shot .veil { display: none; }
 /* ─────── curation ─────── */
 .curation__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-8); align-items: start; }
 .curation__grid .section__head { margin-bottom: 0; }
+.curation__grid .display { font-size: clamp(2.5rem, 5.2vw, 5rem); }
 .curation__list { margin: var(--s-8) 0; border-top: 1px solid var(--hair); }
 .curation__list li { display: grid; grid-template-columns: 120px 1fr; gap: var(--s-5); padding: var(--s-5) 0; border-bottom: 1px solid var(--hair); }
 .curation__list .mono { color: var(--sand-dim); padding-top: 4px; }
@@ -320,6 +321,13 @@ html.no-motion *, html.shot * { animation: none !important; transition: none !im
   .foot { flex-direction: column; }
   .curation__list li, .contact__list li { grid-template-columns: 1fr; gap: var(--s-2); }
   .hero__inner { padding-top: 24vh; }
+  .hero__title { font-size: clamp(2rem, 10.5vw, 2.6rem); max-width: none; }
+  .hero__scroll { display: none; }
+  .hero__foot { gap: var(--s-4); }
+  .lede, .lane__desc { max-width: 100%; }
+  .display { font-size: clamp(2.4rem, 12vw, 3rem); }
+  .display--xl { font-size: clamp(2.8rem, 15vw, 3.6rem); }
+  .contact__list a, .tracks li span:nth-child(2) { font-size: 1.25rem; overflow-wrap: anywhere; }
 }
 
 /* ─────── screenshot mode (?shot): cap viewport-height sections ─────── */
