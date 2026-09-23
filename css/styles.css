@@ -247,6 +247,18 @@ html.no-motion .veil, html.shot .veil { display: none; }
 .f1__more { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-6); margin-top: var(--s-9); color: var(--sand); font-size: var(--t-body); }
 .f1__more li::before { content: "·"; color: var(--accent); margin-right: var(--s-3); }
 
+/* ─────── stage strip ─────── */
+.stage { padding-right: 0; overflow: hidden; }
+.stage__head { padding-right: var(--gutter); }
+.strip { display: flex; gap: var(--s-5); overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: var(--s-5); padding-right: var(--gutter); scrollbar-width: none; cursor: grab; }
+.strip::-webkit-scrollbar { display: none; }
+.strip__item { flex: 0 0 auto; width: clamp(240px, 26vw, 380px); scroll-snap-align: start; }
+.strip__item--wide { width: clamp(360px, 40vw, 600px); }
+.strip__item img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; filter: grayscale(0.15); transition: filter 600ms; }
+.strip__item--wide img { aspect-ratio: 3 / 2; }
+.strip__item:hover img { filter: none; }
+.strip__item figcaption { margin-top: var(--s-3); color: var(--sand-dim); }
+
 /* ─────── curation ─────── */
 .curation__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-8); align-items: start; }
 .curation__grid .section__head { margin-bottom: 0; }
