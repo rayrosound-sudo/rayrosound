@@ -130,6 +130,23 @@
     }, { passive: false });
   });
 
+  /* ── availability form → WhatsApp / email with prefilled text ── */
+  var avail = document.querySelector('[data-avail]');
+  if (avail) {
+    function availText() {
+      var d = avail.date.value || 'TBC', v = avail.venue.value || 'TBC', f = avail.format.value;
+      return 'Hi Ray, checking availability: ' + d + ' · ' + v + ' · ' + f + '. Could you confirm and send a quote?';
+    }
+    avail.addEventListener('submit', function (e) {
+      e.preventDefault();
+      window.open('https://wa.me/971585820397?text=' + encodeURIComponent(availText()), '_blank', 'noopener');
+    });
+    avail.querySelector('[data-avail-mail]').addEventListener('click', function () {
+      if (!avail.reportValidity()) return;
+      location.href = 'mailto:bookings@rayrosound.com?subject=' + encodeURIComponent('Availability: ' + (avail.date.value || 'date TBC') + ' · ' + (avail.venue.value || '')) + '&body=' + encodeURIComponent(availText());
+    });
+  }
+
   /* ── YouTube lightbox ── */
   var lb = document.querySelector('.lightbox'), frame = lb && lb.querySelector('.lightbox__frame');
   function openVideo(id) {
