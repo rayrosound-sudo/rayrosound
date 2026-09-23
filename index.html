@@ -6,9 +6,13 @@
   <meta name="theme-color" content="#0E0E0D" />
   <meta name="color-scheme" content="dark" />
 
-  <title>Ray Ro — DJ · Producer · Music Curator · Dubai</title>
-  <meta name="description" content="Ray Ro — Dubai-based DJ, producer and music curator. Afro, melodic house and indie dance for luxury hospitality: Burj Al Arab, The Ritz-Carlton, St. Regis, F1 Abu Dhabi GP. Bookings worldwide." />
+  <title>Ray Ro — Afro & Melodic House DJ in Dubai · Producer · Music Curator</title>
+  <meta name="description" content="Ray Ro is a Dubai-based DJ, producer and music curator: Afro House, Melodic House and Indie Dance for luxury hotels, beach clubs, private and corporate events. Resident at LY-LA DIFC, music curator at Caña Beach (Ritz-Carlton) and Rüya (St. Regis), ex-SAL Burj Al Arab, F1 Abu Dhabi GP 2025 with Adam Port. Book a DJ in Dubai, UAE and GCC." />
+  <meta name="keywords" content="Ray Ro, DJ Dubai, Afro House DJ Dubai, Melodic House DJ Dubai, Dubai DJ for hire, luxury hotel DJ UAE, beach club DJ Dubai, sunset DJ Dubai, event DJ Dubai, corporate event DJ UAE, wedding DJ Dubai, music curator Dubai, resident DJ Dubai, DJ Abu Dhabi, DJ booking UAE, organic house DJ, indie dance DJ" />
   <meta name="author" content="Ray Ro" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="geo.region" content="AE-DU" />
+  <meta name="geo.placename" content="Dubai" />
   <link rel="canonical" href="https://rayrosound.com/" />
 
   <meta property="og:type" content="profile" />
@@ -25,24 +29,61 @@
   <meta name="twitter:image" content="https://rayrosound.com/assets/img/og.jpg" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:image:alt" content="Ray Ro — DJ, producer and music curator, Dubai" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rayrosound.com/#person",
-    "name": "Ray Ro",
-    "url": "https://rayrosound.com/",
-    "image": "https://rayrosound.com/assets/img/portrait-light.jpg",
-    "jobTitle": "DJ, Producer & Music Curator",
-    "description": "Dubai-based DJ, producer and music curator. Afro, melodic house and indie dance for luxury hospitality.",
-    "email": "mailto:bookings@rayrosound.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
-    "sameAs": [
-      "https://instagram.com/rayro.me",
-      "https://open.spotify.com/artist/5fw5fQ2Esfe9djr1GewYUo",
-      "https://soundcloud.com/rayrosound",
-      "https://youtube.com/@rayrosound"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://rayrosound.com/#website",
+        "url": "https://rayrosound.com/",
+        "name": "Ray Ro",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://rayrosound.com/#person" }
+      },
+      {
+        "@type": ["Person", "MusicGroup"],
+        "@id": "https://rayrosound.com/#person",
+        "name": "Ray Ro",
+        "alternateName": ["Ray Ro DJ", "DJ Ray Ro", "rayrosound"],
+        "url": "https://rayrosound.com/",
+        "image": "https://rayrosound.com/assets/img/portrait-orange.jpg",
+        "jobTitle": "DJ, Producer & Music Curator",
+        "description": "Dubai-based DJ, producer and music curator. Afro House, Melodic House and Indie Dance for luxury hotels, beach clubs, private and corporate events across the UAE and GCC.",
+        "genre": ["Afro House", "Melodic House", "Organic House", "Indie Dance"],
+        "email": "mailto:bookings@rayrosound.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+        "homeLocation": { "@type": "Place", "name": "Dubai, United Arab Emirates" },
+        "areaServed": ["Dubai", "Abu Dhabi", "United Arab Emirates", "Saudi Arabia", "Qatar", "Bahrain", "Oman", "Worldwide"],
+        "knowsAbout": ["Afro House", "Melodic House", "Music curation for hospitality", "Sunset DJ sets", "Luxury event entertainment"],
+        "hasOccupation": [
+          { "@type": "Occupation", "name": "DJ" },
+          { "@type": "Occupation", "name": "Music Producer" },
+          { "@type": "Occupation", "name": "Music Curator" }
+        ],
+        "performerIn": [
+          { "@type": "Event", "name": "F1 Abu Dhabi Grand Prix 2025 — main stage & podium, opening for Adam Port", "location": { "@type": "Place", "name": "Yas Marina Circuit, Abu Dhabi" }, "startDate": "2025-12" },
+          { "@type": "Event", "name": "Google × Abu Dhabi Gaming — Move 2025", "location": { "@type": "Place", "name": "Abu Dhabi" }, "startDate": "2025" },
+          { "@type": "Event", "name": "Marriott Global Event — The St. Regis Dubai, The Palm", "location": { "@type": "Place", "name": "Dubai" } }
+        ],
+        "sameAs": [
+          "https://instagram.com/rayro.me",
+          "https://open.spotify.com/artist/5fw5fQ2Esfe9djr1GewYUo",
+          "https://soundcloud.com/rayrosound",
+          "https://youtube.com/@rayrosound"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://rayrosound.com/#booking",
+        "name": "DJ booking & music curation — Ray Ro",
+        "serviceType": ["DJ for luxury hotels and beach clubs", "Sunset DJ sets", "Private and corporate event DJ", "Wedding DJ", "Festival and brand-event DJ", "Music direction for hospitality venues"],
+        "provider": { "@id": "https://rayrosound.com/#person" },
+        "areaServed": ["Dubai", "Abu Dhabi", "UAE", "GCC"],
+        "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://rayrosound.com/#contact", "availableLanguage": ["en", "ru"] }
+      }
     ]
   }
   </script>
@@ -110,6 +151,7 @@
         </div>
         <p class="hero__role mono" data-reveal>DJ · Producer · Music Curator</p>
         <h1 class="hero__title">
+          <span class="sr-only">Ray Ro — DJ, producer and music curator in Dubai. </span>
           <span class="line"><span class="line__in">afro, melodic &amp;</span></span>
           <span class="line"><span class="line__in">indie dance</span></span>
           <span class="line"><span class="line__in">for rooms that</span></span>
@@ -365,6 +407,7 @@
           <span class="line"><span class="line__in">dates.</span></span>
         </h2>
         <p class="lede" data-reveal>Residencies, guest sets, private and corporate events. UAE, GCC and beyond. Managed by Sviatlana Leonava.</p>
+        <p class="contact__seo" data-reveal>Ray Ro is a Dubai DJ for luxury hotels, beach clubs, rooftop lounges, weddings, brand launches and festival stages. Afro House, Melodic House and Indie Dance, from a sunset session at the Ritz-Carlton to the F1 Abu Dhabi Grand Prix main stage. Available across Dubai, Abu Dhabi, the UAE, Saudi Arabia, Qatar and worldwide.</p>
         <ul class="contact__list" data-reveal>
           <li><span class="mono">Email</span><a href="mailto:bookings@rayrosound.com" data-cursor="mail">bookings@rayrosound.com</a></li>
           <li><span class="mono">WhatsApp</span><a href="https://wa.me/971000000000" target="_blank" rel="noopener" data-cursor="open" data-whatsapp>+971 · on request</a></li>

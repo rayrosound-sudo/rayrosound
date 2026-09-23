@@ -345,3 +345,7 @@ html.no-motion *, html.shot * { animation: none !important; transition: none !im
 /* ─────── screenshot mode (?shot): cap viewport-height sections ─────── */
 html.shot .hero, html.shot .f1, html.shot .contact { min-height: 900px; }
 @media (max-width: 600px) { html.shot .hero, html.shot .f1, html.shot .contact { min-height: 780px; } }
+
+/* ─────── a11y / seo helpers ─────── */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.contact__seo { margin-top: var(--s-6); color: var(--sand-dim); max-width: 48ch; font-size: var(--t-body); }
