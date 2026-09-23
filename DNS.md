@@ -1,5 +1,8 @@
 # rayrosound.com — DNS в Porkbun (сайт + почта)
 
+> Статус 23.09.2026: раздел 1 (сайт) **сделан через Porkbun API**, домен резолвится и отдаёт сайт.
+> API-ключи Porkbun лежат в `~/.config/porkbun/rayro.env` (не в репо). Раздел 2 (почта) ещё не сделан.
+
 Регистратор и DNS: Porkbun (аккаунт `rayro`). Nameservers оставить порк-баневские
 (`curitiba/fortaleza/maceio/salvador.ns.porkbun.com`), ничего не переносить.
 
