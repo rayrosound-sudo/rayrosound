@@ -4,7 +4,8 @@
   var canvas = document.querySelector('.hero__canvas');
   if (!canvas) return;
   var ctx = canvas.getContext('2d', { alpha: false });
-  var reduced = document.documentElement.classList.contains('no-motion');
+  var cls = document.documentElement.classList;
+  var reduced = cls.contains('no-motion') || cls.contains('shot');
   var w, h, t = 0, raf, running = true;
 
   // palette: ink → graphite → sand → a single warm accent glow
