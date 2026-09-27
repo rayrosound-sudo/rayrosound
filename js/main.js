@@ -89,7 +89,7 @@
 
   /* ── F1 video: play only in view ── */
   var f1v = document.querySelector('.f1__video');
-  if (f1v && 'IntersectionObserver' in window) {
+  if (f1v && f1v.tagName === 'VIDEO' && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (e.isIntersecting) { f1v.play().catch(function () {}); } else { f1v.pause(); }
