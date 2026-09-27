@@ -210,6 +210,7 @@
       if (location.search.indexOf('shot') > -1) h.classList.add('shot');
     })();
   </script>
+  <script defer src="https://analytics.soniqo.io/script.js" data-website-id="14295572-b496-465f-94af-3ec234f751e7" data-domains="rayrosound.com,www.rayrosound.com"></script>
 </head>
 <body>
 
@@ -233,9 +234,9 @@
       <a href="#curation">Curation</a>
       <a href="#listen">Listen</a>
       <a href="faq.html">FAQ</a>
-      <a href="#contact" class="top__cta">Book</a>
+      <a href="#contact" class="top__cta" data-umami-event="book-nav">Book</a>
     </nav>
-    <div class="top__meta mono"><span class="top__clock">Dubai · <span data-clock>--:--</span> GST</span><a href="#contact" class="top__cta top__cta--m">Book</a></div>
+    <div class="top__meta mono"><span class="top__clock">Dubai · <span data-clock>--:--</span> GST</span><a href="#contact" class="top__cta top__cta--m" data-umami-event="book-nav-mobile">Book</a></div>
   </header>
 
   <main id="top">
@@ -285,7 +286,7 @@
           <div class="lane__index mono">I</div>
           <h3 class="lane__name">Afro House</h3>
           <p class="lane__desc">Percussion-led, vocal, generous. The lane that fills a beach terrace without asking anyone to move.</p>
-          <button class="player" type="button" data-yt="RgMtoD_0YS0" data-cursor="play" aria-label="Play: chilled set at SAL, Burj Al Arab">
+          <button class="player" type="button" data-yt="RgMtoD_0YS0" data-umami-event="play-set" data-umami-event-video="RgMtoD_0YS0" data-cursor="play" aria-label="Play: chilled set at SAL, Burj Al Arab">
             <img class="player__poster" src="https://i.ytimg.com/vi/RgMtoD_0YS0/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360" />
             <span class="player__meta mono">SAL · Burj Al Arab<br>sunset set</span>
             <span class="player__btn mono">Play</span>
@@ -296,7 +297,7 @@
           <div class="lane__index mono">II</div>
           <h3 class="lane__name">Melodic House</h3>
           <p class="lane__desc">Long arcs, piano chords, harmonies that hold the room. Where the productions live.</p>
-          <button class="player" type="button" data-yt="tsNYrGCNgGk" data-cursor="play" aria-label="Play: atmospheric set at SLS Dubai">
+          <button class="player" type="button" data-yt="tsNYrGCNgGk" data-umami-event="play-set" data-umami-event-video="tsNYrGCNgGk" data-cursor="play" aria-label="Play: atmospheric set at SLS Dubai">
             <img class="player__poster" src="https://i.ytimg.com/vi/tsNYrGCNgGk/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360" />
             <span class="player__meta mono">SLS Dubai<br>atmospheric jazzy house</span>
             <span class="player__btn mono">Play</span>
@@ -307,7 +308,7 @@
           <div class="lane__index mono">III</div>
           <h3 class="lane__name">Organic House</h3>
           <p class="lane__desc">Slow, textured, downtempo at heart. Sundowners, private dinners, the hour before the room turns.</p>
-          <button class="player" type="button" data-yt="8rdfERg5yCU" data-cursor="play" aria-label="Play: sundown set at Sveti Stefan, Montenegro">
+          <button class="player" type="button" data-yt="8rdfERg5yCU" data-umami-event="play-set" data-umami-event-video="8rdfERg5yCU" data-cursor="play" aria-label="Play: sundown set at Sveti Stefan, Montenegro">
             <img class="player__poster" src="https://i.ytimg.com/vi/8rdfERg5yCU/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360" />
             <span class="player__meta mono">Sveti Stefan · Montenegro<br>sundown balcony set</span>
             <span class="player__btn mono">Play</span>
@@ -525,17 +526,17 @@
             </label>
           </div>
           <div class="avail__actions">
-            <button type="button" class="btn" data-avail-mail data-cursor="mail">Send by email</button>
-            <button type="submit" class="btn btn--ghost" data-cursor="go">Send on WhatsApp</button>
+            <button type="button" class="btn" data-avail-mail data-umami-event="form-email" data-cursor="mail">Send by email</button>
+            <button type="submit" class="btn btn--ghost" data-cursor="go" data-umami-event="form-whatsapp">Send on WhatsApp</button>
           </div>
         </form>
         <ul class="contact__list" data-reveal>
-          <li><span class="mono">Email</span><a href="mailto:bookings@rayrosound.com" data-cursor="mail">bookings@rayrosound.com</a></li>
-          <li><span class="mono">WhatsApp</span><a href="https://wa.me/971585820397?text=Hi%20Ray%2C%20I%27d%20like%20to%20talk%20about%20a%20booking" target="_blank" rel="noopener" data-cursor="open" data-whatsapp>+971 58 582 0397</a></li>
-          <li><span class="mono">Instagram</span><a href="https://instagram.com/rayro.me" target="_blank" rel="noopener" data-cursor="open">@rayro.me</a></li>
-          <li><span class="mono">EPK</span><a href="assets/RayRo-EPK.pdf" target="_blank" rel="noopener" data-cursor="open">PDF · 20 pages</a></li>
-          <li><span class="mono">Tech rider</span><a href="assets/RayRo-Tech-Rider.pdf" target="_blank" rel="noopener" data-cursor="open">PDF · 1 page</a></li>
-          <li><span class="mono">Press kit</span><a href="assets/RayRo-PressKit.zip" data-cursor="open">Bio · 4 photos · logo · zip</a></li>
+          <li><span class="mono">Email</span><a href="mailto:bookings@rayrosound.com" data-umami-event="email-click" data-cursor="mail">bookings@rayrosound.com</a></li>
+          <li><span class="mono">WhatsApp</span><a href="https://wa.me/971585820397?text=Hi%20Ray%2C%20I%27d%20like%20to%20talk%20about%20a%20booking" target="_blank" rel="noopener" data-cursor="open" data-whatsapp data-umami-event="whatsapp-click">+971 58 582 0397</a></li>
+          <li><span class="mono">Instagram</span><a href="https://instagram.com/rayro.me" data-umami-event="instagram" target="_blank" rel="noopener" data-cursor="open">@rayro.me</a></li>
+          <li><span class="mono">EPK</span><a href="assets/RayRo-EPK.pdf" data-umami-event="epk-download" target="_blank" rel="noopener" data-cursor="open">PDF · 20 pages · 3 MB</a></li>
+          <li><span class="mono">Tech rider</span><a href="assets/RayRo-Tech-Rider.pdf" data-umami-event="tech-rider" target="_blank" rel="noopener" data-cursor="open">PDF · 1 page</a></li>
+          <li><span class="mono">Press kit</span><a href="assets/RayRo-PressKit.zip" data-umami-event="press-kit" data-cursor="open">Bio · 4 photos · logo · zip</a></li>
           <li><span class="mono">Questions</span><a href="faq.html" data-cursor="open">Fees, formats, travel, setup</a></li>
         </ul>
       </div>
