@@ -78,8 +78,8 @@
       setTimeout(function () {
         html.classList.remove('is-loading');
         html.classList.add('is-ready');
-        setTimeout(heroIn, 350);
-      }, 700);
+        setTimeout(heroIn, 120);
+      }, 200);
     });
     // Safety: if load never fires (blocked font), still reveal
     setTimeout(function () { if (!html.classList.contains('is-ready')) { html.classList.remove('is-loading'); html.classList.add('is-ready'); heroIn(); } }, 4000);

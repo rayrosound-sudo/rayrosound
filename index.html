@@ -193,8 +193,11 @@
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@300,400,500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@300,400,500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@300,400,500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="image" href="assets/img/desert-sm.jpg" imagesrcset="assets/img/desert-sm.jpg 571w, assets/img/desert.jpg 1143w" imagesizes="100vw" fetchpriority="high" />
   <link rel="stylesheet" href="css/styles.css" />
 
   <script>
@@ -240,11 +243,8 @@
     <!-- ═══ HERO ═══ -->
     <section class="hero" id="hero">
       <div class="hero__bg" aria-hidden="true">
-        <img class="hero__photo" src="assets/img/desert.jpg" alt="" width="1143" height="1600" fetchpriority="high" decoding="async" />
+        <img class="hero__photo" src="assets/img/desert.jpg" srcset="assets/img/desert-sm.jpg 571w, assets/img/desert.jpg 1143w" sizes="100vw" alt="" width="1143" height="1600" fetchpriority="high" decoding="async" />
         <canvas class="hero__canvas"></canvas>
-        <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
-          <source src="assets/video/hero.mp4" type="video/mp4" />
-        </video>
         <div class="hero__shade"></div>
       </div>
 
@@ -352,7 +352,7 @@
         </ol>
 
         <figure class="venues__fig" data-parallax="0.12">
-          <img src="assets/img/cana-sunset.jpg" alt="Ray Ro playing a sunset session at Caña Beach, The Ritz-Carlton JBR" loading="lazy" decoding="async" width="1200" height="1600" />
+          <img src="assets/img/cana-sunset.jpg" srcset="assets/img/cana-sunset-sm.jpg 600w, assets/img/cana-sunset.jpg 1200w" sizes="(max-width: 960px) 100vw, 50vw" alt="Ray Ro playing a sunset session at Caña Beach, The Ritz-Carlton JBR" loading="lazy" decoding="async" width="1200" height="1600" />
           <figcaption class="mono">Caña Beach · sunset session</figcaption>
         </figure>
       </div>
@@ -361,9 +361,7 @@
     <!-- ═══ F1 ═══ -->
     <section class="f1 section" id="f1">
       <div class="f1__media" data-parallax="0.08" aria-hidden="true">
-        <video class="f1__video" muted loop playsinline preload="none" poster="assets/img/f1-circuit.jpg">
-          <source src="assets/video/f1.mp4" type="video/mp4" />
-        </video>
+        <img class="f1__video" src="assets/img/f1-circuit.jpg" srcset="assets/img/f1-circuit-sm.jpg 800w, assets/img/f1-circuit.jpg 2048w" sizes="100vw" alt="" loading="lazy" decoding="async" width="2048" height="1365" />
         <div class="f1__shade"></div>
       </div>
       <div class="f1__inner">
@@ -400,35 +398,35 @@
       </header>
       <div class="strip" data-strip>
         <figure class="strip__item" data-reveal>
-          <img src="assets/img/stage/f1-grandstand.jpg" alt="Ray Ro at the F1 Abu Dhabi Grand Prix, Yas Marina" loading="lazy" decoding="async" width="1200" height="1600" />
+          <img src="assets/img/stage/f1-grandstand.jpg" srcset="assets/img/stage/f1-grandstand-sm.jpg 600w, assets/img/stage/f1-grandstand.jpg 900w" sizes="(max-width: 960px) 72vw, 30vw" alt="Ray Ro at the F1 Abu Dhabi Grand Prix, Yas Marina" loading="lazy" decoding="async" width="1200" height="1600" />
           <figcaption class="mono">F1 Abu Dhabi GP · Yas Marina · 2025</figcaption>
         </figure>
         <figure class="strip__item" data-reveal>
-          <img src="assets/img/stage/google-move.jpg" alt="Ray Ro playing at Google × Abu Dhabi Gaming, Move 2025" loading="lazy" decoding="async" width="1066" height="1600" />
+          <img src="assets/img/stage/google-move.jpg" srcset="assets/img/stage/google-move-sm.jpg 532w, assets/img/stage/google-move.jpg 799w" sizes="(max-width: 960px) 72vw, 30vw" alt="Ray Ro playing at Google × Abu Dhabi Gaming, Move 2025" loading="lazy" decoding="async" width="1066" height="1600" />
           <figcaption class="mono">Google × Abu Dhabi Gaming · Move 2025</figcaption>
         </figure>
         <figure class="strip__item strip__item--wide" data-reveal>
-          <img src="assets/img/stage/st-regis-marriott.jpg" alt="Ray Ro at the Marriott Global Event, St. Regis The Palm" loading="lazy" decoding="async" width="1600" height="1068" />
+          <img src="assets/img/stage/st-regis-marriott.jpg" srcset="assets/img/stage/st-regis-marriott-sm.jpg 800w, assets/img/stage/st-regis-marriott.jpg 1200w" sizes="(max-width: 960px) 72vw, 30vw" alt="Ray Ro at the Marriott Global Event, St. Regis The Palm" loading="lazy" decoding="async" width="1600" height="1068" />
           <figcaption class="mono">Marriott Global Event · St. Regis The Palm</figcaption>
         </figure>
         <figure class="strip__item" data-reveal>
-          <img src="assets/img/stage/lyla-dj.jpg" alt="Ray Ro resident set at LY-LA, DIFC" loading="lazy" decoding="async" width="1066" height="1600" />
+          <img src="assets/img/stage/lyla-dj.jpg" srcset="assets/img/stage/lyla-dj-sm.jpg 532w, assets/img/stage/lyla-dj.jpg 799w" sizes="(max-width: 960px) 72vw, 30vw" alt="Ray Ro resident set at LY-LA, DIFC" loading="lazy" decoding="async" width="1066" height="1600" />
           <figcaption class="mono">LY-LA · DIFC · residency</figcaption>
         </figure>
         <figure class="strip__item" data-reveal>
-          <img src="assets/img/stage/cana-beach.jpg" alt="Caña Beach at The Ritz-Carlton JBR at sunset" loading="lazy" decoding="async" width="1143" height="1600" />
+          <img src="assets/img/stage/cana-beach.jpg" srcset="assets/img/stage/cana-beach-sm.jpg 571w, assets/img/stage/cana-beach.jpg 857w" sizes="(max-width: 960px) 72vw, 30vw" alt="Caña Beach at The Ritz-Carlton JBR at sunset" loading="lazy" decoding="async" width="1143" height="1600" />
           <figcaption class="mono">Caña Beach · The Ritz-Carlton JBR</figcaption>
         </figure>
         <figure class="strip__item" data-reveal>
-          <img src="assets/img/stage/sal-decks.jpg" alt="Ray Ro playing a sunset session at SAL, Burj Al Arab" loading="lazy" decoding="async" width="900" height="1600" />
+          <img src="assets/img/stage/sal-decks.jpg" srcset="assets/img/stage/sal-decks-sm.jpg 450w, assets/img/stage/sal-decks.jpg 675w" sizes="(max-width: 960px) 72vw, 30vw" alt="Ray Ro playing a sunset session at SAL, Burj Al Arab" loading="lazy" decoding="async" width="900" height="1600" />
           <figcaption class="mono">SAL · Burj Al Arab</figcaption>
         </figure>
         <figure class="strip__item strip__item--wide" data-reveal>
-          <img src="assets/img/stage/sal-aerial.jpg" alt="SAL beach club at Burj Al Arab from above" loading="lazy" decoding="async" width="1600" height="1066" />
+          <img src="assets/img/stage/sal-aerial.jpg" srcset="assets/img/stage/sal-aerial-sm.jpg 800w, assets/img/stage/sal-aerial.jpg 1200w" sizes="(max-width: 960px) 72vw, 30vw" alt="SAL beach club at Burj Al Arab from above" loading="lazy" decoding="async" width="1600" height="1066" />
           <figcaption class="mono">SAL · Burj Al Arab · aerial</figcaption>
         </figure>
         <figure class="strip__item strip__item--wide" data-reveal>
-          <img src="assets/img/stage/pure-ibiza.jpg" alt="Ray Ro at Pure Ibiza Radio, Dubai" loading="lazy" decoding="async" width="1600" height="896" />
+          <img src="assets/img/stage/pure-ibiza.jpg" srcset="assets/img/stage/pure-ibiza-sm.jpg 800w, assets/img/stage/pure-ibiza.jpg 1200w" sizes="(max-width: 960px) 72vw, 30vw" alt="Ray Ro at Pure Ibiza Radio, Dubai" loading="lazy" decoding="async" width="1600" height="896" />
           <figcaption class="mono">Pure Ibiza Radio · Dubai</figcaption>
         </figure>
       </div>
@@ -499,7 +497,7 @@
     <!-- ═══ CONTACT ═══ -->
     <section class="contact section" id="contact">
       <figure class="contact__fig" data-parallax="0.1">
-        <img src="assets/img/portrait-orange.jpg" alt="Ray Ro" loading="lazy" decoding="async" width="1279" height="1600" />
+        <img src="assets/img/portrait-orange.jpg" srcset="assets/img/portrait-orange-sm.jpg 639w, assets/img/portrait-orange.jpg 1279w" sizes="(max-width: 960px) 100vw, 50vw" alt="Ray Ro" loading="lazy" decoding="async" width="1279" height="1600" />
       </figure>
       <div class="contact__inner">
         <span class="mono label">07 — Bookings</span>
